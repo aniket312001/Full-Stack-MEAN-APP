@@ -1,0 +1,26 @@
+
+
+<table class="table mt-5" >
+    <thead>
+      <tr>
+        <th scope="col">#</th>
+        <th scope="col">Name</th>
+        <th scope="col">Email</th>
+        <th scope="col">Mobile</th>
+        <th scope="col">Action</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let i of user">
+        <th scope="row">{{i.id}}</th>
+        <td>{{i.name}}</td>
+        <td>{{i.email}}</td>
+        <td>{{i.mobile}}</td>
+        <td>
+            <a class="btn btn-info" routerLink="../update/{{i.id}}" >Edit</a>&nbsp;
+            <button class="btn btn-danger" (click)="onDelete(i.id)" >Delete</button>
+        </td>
+
+      </tr>
+    </tbody>
+  </table>
